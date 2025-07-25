@@ -1,0 +1,517 @@
+body{
+    margin: 0;
+    font-family: Poppins;
+    overflow: hidden; /* 不滾動，內部滾動 */
+}
+
+
+li{
+    list-style: none;
+}
+
+
+
+.container{
+    width: 900px;
+    margin: auto;
+    max-width: 90vw;
+    text-align: center;
+    padding-top: 10px;
+    transition: transform .5s;
+}
+svg{
+    width: 30px;
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+.icon-cart {
+  position: relative; /* 不再是 fixed，改為相對於父元素 */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px; /* 調整圖示大小 */
+  width: 40px; /* 可自行調整大小 */
+  height: 40px;
+}
+
+/* 購物車數字位置固定在圖示內 */
+.icon-cart span {
+  position: absolute;
+  top: -1px;
+  right: -6px;
+  background: red;
+  color: #fff;
+  padding: 2px 6px;
+  font-size: 12px;
+  border-radius: 50%;
+  line-height: 1;
+}
+
+#left_menu, #right_menu{
+    margin-top: 25px;
+}
+
+/* 圖示 SVG 調整大小 */
+.icon-cart svg {
+  width: 18px;
+  height: 18px;
+}
+
+.title{
+    font-size: xx-large;
+}
+.listProduct .item img{
+    width: 90%;
+    filter: drop-shadow(0 50px 20px #0009);
+}
+.listProduct{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.listProduct .item{
+    background-color: #EEEEE6;
+    padding: 20px;
+    border-radius: 20px;
+}
+.listProduct .item h2{
+    font-weight: 500;
+    font-size: large;
+}
+.listProduct .item .price{
+    letter-spacing: 7px;
+    font-size: small;
+}
+.listProduct .item button{
+    background-color: #353432;
+    color: #eee;
+    border: none;
+    padding: 5px 10px;
+    margin-top: 10px;
+    border-radius: 20px;
+}
+
+/* cart */
+.cartTab{
+    width: 400px;
+    background-color: #353432;
+    color: #eee;
+    position: fixed;
+    top: 0;
+    right: -400px;
+    bottom: 0;
+    display: grid;
+    grid-template-rows: 70px 1fr 70px;
+    transition: .5s;
+}
+body.showCart .cartTab{
+    right: 0;
+    margin-top: 34px;
+}
+body.showCart .container{
+    transform: translateX(-250px);
+}
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+}
+.cartTab .btn{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+.cartTab button{
+    background-color: #E8BC0E;
+    border: none;
+    font-family: Poppins;
+    font-weight: 500;
+    cursor: pointer;
+}
+.cartTab .close{
+    background-color: #eee;
+}
+.listCart .item img{
+    width: 100%;
+}
+.listCart .item{
+    display: grid;
+    grid-template-columns: 70px 150px 50px 1fr;
+    gap: 10px;
+    text-align: center;
+    align-items: center;
+}
+.listCart .quantity span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+    color: #555;
+    cursor: pointer;
+}
+.listCart .quantity span:nth-child(2){
+    background-color: transparent;
+    color: #eee;
+    cursor: auto;
+}
+.listCart .item:nth-child(even){
+    background-color: #eee1;
+}
+.listCart{
+    overflow: auto;
+}
+.listCart::-webkit-scrollbar{
+    width: 0;
+}
+@media only screen and (max-width: 992px) {
+    .listProduct{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+    .listProduct{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* 桌面版：左側選單固定 */
+@media (min-width: 992px) {
+  #left_menu {
+    position: sticky;
+    top: 20px;
+    height: calc(100vh - 40px); /* 自動填滿視窗高度 */
+    overflow-y: auto;
+  }
+}
+
+/* 手機與平板：左側選單保持正常流動 */
+@media (max-width: 991.98px) {
+  #left_menu {
+    position: static;
+    height: auto;
+    overflow: visible;
+  }
+}
+
+/* 左側選單樣式調整 */
+#left_menu .list-group {
+  padding: 0;
+  list-style: none;
+}
+
+#left_menu .list-group li {
+  margin-bottom: 10px;
+}
+
+#left_menu .list-group li a {
+  display: block;
+  color: #007bff;
+  text-decoration: none;
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+#left_menu .list-group li a:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+/* 隱藏左側選單的滾輪（桌面版） */
+@media (min-width: 992px) {
+  #left_menu {
+    scrollbar-width: none; /* Firefox 隱藏滾輪 */
+    -ms-overflow-style: none; /* IE 和 Edge 隱藏滾輪 */
+  }
+
+  #left_menu::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera 隱藏滾輪 */
+  }
+}
+.category-section {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* 固定商品區塊大小 */
+.category-section .item {
+  width: 220px; /* 固定寬度 */
+  height: 300px; /* 固定高度 */
+  background: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  transition: transform 0.3s;
+  box-sizing: border-box;
+  overflow: hidden; /* 確保內容不溢出 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+/* 商品圖片：自適應填滿區塊 */
+.category-section .item img {
+  width: 100%;
+  max-width: 180px; /* 圖片寬度上限 */
+  height: auto; /* 高度自適應 */
+  object-fit: cover;
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* 平板（768px - 1024px）：商品略微放大 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .category-section .item {
+    width: 250px;
+    height: 320px;
+  }
+
+  .category-section .item img {
+    max-width: 200px;
+    height: 200px;
+  }
+}
+
+/* 手機版：商品一行一個 */
+@media (max-width: 768px) {
+  .category-section .item {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  .category-section .item img {
+    width: 100%;
+    max-width: 300px; /* 確保圖片正常顯示 */
+    height: auto;
+  }
+}
+
+/* 商品名稱與價格正常顯示 */
+.category-section .item h3 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+.category-section .item .price {
+  font-size: 14px;
+  color: #333;
+}
+
+/* 手機版：商品一行一個，寬度自適應 */
+@media (max-width: 768px) {
+  .category-section .item {
+    width: 100%; /* 滿寬 */
+    max-width: none; /* 取消最大寬度限制 */
+    height: auto;
+    margin: 10px 0; /* 上下間距 */
+  }
+
+  .category-section .item img {
+    width: 100%;
+    height: auto;
+    max-width: 300px; /* 圖片不會過大 */
+    margin: 0 auto; /* 圖片置中 */
+  }
+}
+
+
+
+/* 主要容器：水平排列左右兩側 */
+.main-container {
+  display: flex;
+  height: 100vh; /* 滿高 */
+  overflow: hidden; /* 確保主容器不滾動 */
+}
+
+
+/* 左側選單區：獨立滾動 */
+.left-menu {
+  width: 250px;
+  background-color: #f4f4f4;
+  overflow-y: auto;
+  overflow-x: hidden;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+/* 右側內容區：固定高度 */
+.right-menu {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden; /* 不滾動，內部滾動 */
+  padding: 0;
+  background-color: #fff;
+  position: relative;
+}
+
+
+/* 右側商品列表：獨立滾動區塊 */
+.listProduct {
+  height: 100%;
+  overflow-y: auto; /* 商品列表獨立滾動 */
+  padding: 20px;
+}
+
+
+
+/* 手機版：768px 以下顯示「選單」標題 */
+@media (max-width: 768px) {
+  .list-group-title {
+    display: block;
+  }
+}
+
+/* 桌面與平板：768px 以上隱藏「選單」標題 */
+@media (min-width: 769px) {
+  .list-group-title {
+    display: none;
+  }
+}
+
+/* 手機版：選單變成摺疊選單，預設關閉 */
+@media (max-width: 768px) {
+  .left-menu .list-group-collapse {
+    display: block;
+    overflow: hidden;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 5px;
+    height: auto;
+  }
+
+  /* 摺疊選單標題（點擊可展開） */
+  .left-menu summary {
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    list-style: none;
+    padding: 10px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
+    user-select: none;
+    display: block;
+  }
+
+  /* 手機版預設選單摺疊（關閉） */
+  .left-menu .list-group-collapse[open] {
+    display: block;
+  }
+
+  /* 摺疊內容樣式 */
+  .left-menu ul {
+    margin-top: 10px;
+    list-style: none;
+    padding-left: 15px;
+    display: none; /* 預設隱藏 */
+  }
+
+  /* 手機版：當選單展開時（點擊 "選單"） */
+  .left-menu .list-group-collapse[open] ul {
+    display: block;
+  }
+
+  /* 摺疊選單內的選項樣式 */
+  .left-menu ul li {
+    margin-bottom: 5px;
+  }
+
+  .left-menu ul li a {
+    text-decoration: none;
+    color: #007bff;
+    display: block;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background 0.3s;
+  }
+
+  .left-menu ul li a:hover {
+    background: #007bff;
+    color: #fff;
+  }
+}
+
+
+details.list-group-collapse {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+/* summary 像一個 list item */
+details.list-group-collapse > summary {
+  cursor: pointer;
+  padding: 10px 15px;
+  list-style: none;
+  font-weight: bold;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+details.list-group-collapse[open] > summary {
+  background-color: #e9ecef;
+}
+
+/* 移除 summary 原本的小三角 */
+details.list-group-collapse > summary::-webkit-details-marker {
+  display: none;
+}
+
+/* summary 只在手機出現 */
+@media (min-width: 768px) {
+  .list-group-toggle {
+    display: none !important;
+  }
+}
+
+/* 內容 list-group-content：手機開關控制，電腦永遠顯示 */
+@media (min-width: 768px) {
+  details.list-group-collapse[open] .list-group-content,
+  details.list-group-collapse .list-group-content {
+    display: block !important;
+  }
+}
+
+/* details 整體樣式 */
+details.list-group-collapse {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  font-weight: bold;
+}
+
+/* summary 样式 */
+details.list-group-collapse > summary {
+  cursor: pointer;
+  padding: 10px 15px;
+  list-style: none;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  justify-content: center; /* 讓文字水平置中 */
+}
+
+/* summary 展開時反轉顏色 */
+details.list-group-collapse[open] > summary {
+  background-color: #333;
+  color: white;
+}
+
+/* 隱藏預設 marker（小箭頭） */
+details.list-group-collapse > summary::-webkit-details-marker {
+  display: none;
+}
+

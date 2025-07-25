@@ -1,0 +1,268 @@
+{
+  "categories": [
+    {
+      "name": "人氣商品",
+      "products": [
+        {
+          "id": 1,
+          "name": "蹄膀(腿庫)[整顆不切]",
+          "price": 699,
+          "image": "image/1.png"
+        },
+        {
+          "id": 2,
+          "name": "蹄膀(腿庫)[秤重計價]",
+          "price": 99999,
+          "image": "image/2.png"
+        },
+        {
+          "id": 3,
+          "name": "蹄膀(腿庫)小包",
+          "price": 290,
+          "image": "image/3.png"
+        },
+        {
+          "id": 4,
+          "name": "豬腳(大份)",
+          "price": 399,
+          "image": "image/4.png"
+        },
+        {
+          "id": 5,
+          "name": "豬腳(小份)",
+          "price": 100,
+          "image": "image/5.png"
+        }
+      ]
+    },
+    {
+      "name": "麻辣類",
+      "products": [
+        {
+          "id": 6,
+          "name": "椒麻蛋(一包3顆)",
+          "price": 50,
+          "image": "image/6.png"
+        },
+        {
+          "id": 7,
+          "name": "椒麻鴨翅(一包3支)",
+          "price": 100,
+          "image": "image/7.png"
+        }
+        ,
+        {
+          "id": 8,
+          "name": "椒麻鴨脖(一包2支)",
+          "price": 50,
+          "image": "image/8.png"
+        }
+        ,
+        {
+          "id": 9,
+          "name": "椒麻鴨舌(一包)",
+          "price": 100,
+          "image": "image/1.png"
+        }
+      ]
+    },
+    {
+      "name": "麻油類",
+      "products": [
+        {
+          "id": 10,
+          "name": "麻油豬血糕(一包)",
+          "price": 50,
+          "image": "image/2.png"
+        },
+        {
+          "id": 11,
+          "name": "麻油粉肝(一包)",
+          "price": 50,
+          "image": "image/3.png"
+        },
+        {
+          "id": 12,
+          "name": "麻油豬頭皮(一包)",
+          "price": 40,
+          "image": "image/4.png"
+        }
+      ]
+    },
+    {
+      "name": "菜湯類",
+      "products": [
+        {
+          "id": 13,
+          "name": "滷筍絲(一包)",
+          "price": 50,
+          "image": "image/5.png"
+        },
+        {
+          "id": 14,
+          "name": "滷白菜(一包)",
+          "price": 50,
+          "image": "image/6.png"
+        },
+        {
+          "id": 15,
+          "name": "咖哩醬(一包)",
+          "price": 0,
+          "image": "image/7.png"
+        }
+        ,
+        {
+          "id": 16,
+          "name": "滷肉醬",
+          "price": 0,
+          "image": "image/8.png"
+        }
+        ,
+        {
+          "id": 17,
+          "name": "菜尾湯",
+          "price": 0,
+          "image": "image/1.png"
+        }
+      ]
+    }
+    ,
+    {
+      "name": "冰糖老滷",
+      "products": [
+        {
+          "id": 18,
+          "name": "滷蛋(一包)",
+          "price": 100,
+          "image": "image/2.png"
+        },
+        {
+          "id": 19,
+          "name": "滷雞翅(一包)",
+          "price": 50,
+          "image": "image/3.png"
+        },
+        {
+          "id": 20,
+          "name": "滷雞腿(一支)",
+          "price": 55,
+          "image": "image/4.png"
+        },
+        {
+          "id": 21,
+          "name": "雞爪(一包)",
+          "price": 55,
+          "image": "image/5.png"
+        },
+        {
+          "id": 22,
+          "name": "滷大腸(一包)",
+          "price": 100,
+          "image": "image/6.png"
+        },
+        {
+          "id": 23,
+          "name": "豬頭皮(一包)",
+          "price": 40,
+          "image": "image/7.png"
+        },
+        {
+          "id": 24,
+          "name": "腱子肉(一包)",
+          "price": 50,
+          "image": "image/8.png"
+        },
+        {
+          "id": 25,
+          "name": "滷菜頭(一包)",
+          "price": 50,
+          "image": "image/1.png"
+        },
+        {
+          "id": 26,
+          "name": "杏鮑菇(一包)",
+          "price": 50,
+          "image": "image/2.png"
+        },
+        {
+          "id": 27,
+          "name": "油豆腐(一包)",
+          "price": 60,
+          "image": "image/3.png"
+        },
+        {
+          "id": 28,
+          "name": "甜不辣(一包)",
+          "price": 50,
+          "image": "image/4.png"
+        },
+        {
+          "id": 29,
+          "name": "豆皮(一包)",
+          "price": 60,
+          "image": "image/5.png"
+        },
+        {
+          "id": 30,
+          "name": "豆干(一包)",
+          "price": 100,
+          "image": "image/6.png"
+        },
+        {
+          "id": 31,
+          "name": "貢丸(一包)",
+          "price": 60,
+          "image": "image/7.png"
+        },
+        {
+          "id": 32,
+          "name": "大溪豆乾(一包)",
+          "price": 50,
+          "image": "image/8.png"
+        }
+      ]
+    }
+     ,
+    {
+      "name": "涼拌類",
+      "products": [
+        {
+          "id": 33,
+          "name": "涼拌花椰菜（一包）",
+          "price": 40,
+          "image": "image/1.png"
+        },
+        {
+          "id": 34,
+          "name": "涼拌杏鮑菇（一包）",
+          "price": 40,
+          "image": "image/2.png"
+        },
+        {
+          "id": 35,
+          "name": "涼拌豆皮（一包）",
+          "price": 40,
+          "image": "image/3.png"
+        },
+        {
+          "id": 36,
+          "name": "涼拌豆乾（一包）",
+          "price": 50,
+          "image": "image/4.png"
+        },
+        {
+          "id": 37,
+          "name": "涼拌豬肚（一包）",
+          "price": 50,
+          "image": "image/5.png"
+        },
+        {
+          "id": 38,
+          "name": "涼拌豬頭皮（一包）",
+          "price": 50,
+          "image": "image/6.png"
+        }
+      ]
+    }
+  ]
+}
