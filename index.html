@@ -128,7 +128,7 @@
                                 </ul>
                                 
                             <details class="list-group-collapse" open>
-                                 <summary class="list-group-toggle">📂 教學選單</summary>
+                                 <summary class="list-group-toggle">📂 摺疊選單</summary>
                                                             
                                 <ul class="list-group list-group-content">
                                     <li class="list-group-item tab_item2 text-nowrap tabdown2" value="E001" title="人氣商品">
@@ -497,6 +497,21 @@ document.querySelector('.checkOut').addEventListener('click', function() {
   showOrderModal(itemsData);
 });
 
+// 確保摺疊選單在桌面版保持展開
+function handleResponsiveMenu() {
+  const detailsElement = document.querySelector('.list-group-collapse');
+  if (window.innerWidth >= 768) {
+    detailsElement.setAttribute('open', 'true'); // 桌面版強制展開
+  } else {
+    detailsElement.removeAttribute('open'); // 手機版保持摺疊
+  }
+}
+
+// 在頁面載入時執行
+handleResponsiveMenu();
+
+// 在視窗大小變化時執行
+window.addEventListener('resize', handleResponsiveMenu);
 </script>
 </body>
 </html>
